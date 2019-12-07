@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<div >
+<div class="col">
+          <h1 class="text-center text-uppercase m-4">Descriptions de <small class="text-muted"> mes projets</small></h1>
+    </ul>
+<h1 class="text-info">{{projets.nom}} </h1>
+    {{projets.description}}    
+</ul>
+<ul>
+    <a href="{{projets.lien}}"> Cliquez ici pour en savoir plus sur le projet ^^!</a>
+</ul>
+
+</div>
+{% endblock %}

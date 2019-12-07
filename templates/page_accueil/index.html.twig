@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title %}Hello PageAccueilController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #808080; padding: 2px 6px; }
+</style>
+<section id="about" class="container content-section ">
+<div>
+    <h2>FORMATIONS</h2>
+    <ul>
+        <li> 2018-2020 : Master II Informatique pour les Sciences (IPS)</li>   
+        <li>2016-2017 : Master II Architecture Villes et Territoires.</li>
+        <li>2012-2015: Licence en architecture .</li>
+        <li>2012-2013 : Diplôme technicienne en conception assistée par Ordinateur.</li>
+    </ul>
+</div>
+
+<div>
+    <h2>EXPERIENCES PROFESSIONNELLES </h2>
+                
+    <ul>
+        <li>2017-2018 : Employée -Architecte-Bureau d’études techniques d'architecture et d’urbanisme.</li>
+        <li>2014-2015 : Stagiaire -Bureau d’études d’architecture.</li>
+        <li>2019 : Employée - Hôtesse Service client – Leroy Merlin</li>
+    </ul>
+</div>
+<div>
+<h2> PROJETS </h2>
+{% for projets in projets %}
+<ul>
+<a href="{{path('details',{'id':projets.id})}}">{{projets.nom}}</a>
+</ul>
+{% endfor %}
+</div>
+<div>
+<h2> ACTIVITES EXTRA-PROFESSIONNELLES </h2>
+<ul>
+{% for hobbies in hobbies %}
+<ul>
+{{hobbies.nom}}
+</ul>
+{% endfor %}
+</ul>
+</div>
+
+</section>
+
+{% endblock %}
