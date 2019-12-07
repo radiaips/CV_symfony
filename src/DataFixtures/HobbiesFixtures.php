@@ -12,6 +12,7 @@ class HobbiesFixtures extends Fixture
         for ($i = 0; $i < 5; $i++) {
             $projets = new Hobbies();
             $projets->setNom('nom '.mt_rand(1, 3));
+            $projets->setLien('nn');
             $manager->persist($hobbies);
           
         }

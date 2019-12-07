@@ -21,6 +21,7 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 5; $i++) {
             $hobbies = new Hobbies();
             $hobbies->setNom('projet ');
+            $hobbies->setLien('nn');
             $manager->persist($hobbies);
         }
 
